@@ -1,0 +1,132 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --poppins: "Poppins", sans-serif;
+  --open-sans: "Open Sans", sans-serif;
+}
+
+body {
+  font-family: var(--open-sans);
+  min-height: 375px;
+  background-color: #e7e8ec;
+}
+
+/* header */
+.header {
+  color: #eee;
+  background-color: #6e15c9;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem;
+}
+
+.contacto {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  padding-left: 2rem;
+}
+
+.info-contacto {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5rem 0 1rem;
+}
+
+.correo {
+  padding: 0 0 0 1rem;
+}
+/* barra de navegacion */
+
+#container {
+  font-size: 0.8rem;
+  padding-top: 0.5rem;
+}
+
+#container a {
+  display: flex;
+  color: #eee;
+  padding-right: 1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.contenidoPrincipal {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: max-content 1fr;
+  grid-template-areas:
+    "tabla tabla"
+    "footer footer";
+}
+
+.hobbies {
+  grid-area: tabla;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+}
+
+.hobbies h2 {
+  margin: 0 auto;
+  font-size: 2rem;
+  color: rgb(100, 98, 98);
+}
+
+.tabla {
+  width: 100%;
+  height: 50%;
+  display: table;
+  /* align-items: center;
+  justify-content: center; */
+  padding: 3rem 3rem 3rem 3rem;
+  /*   background-image: url(../img/hobby.jpg);
+  background-size: cover;
+  background-position: center; */
+}
+
+tr {
+  display: table-row;
+}
+td,
+th {
+  display: table-cell;
+  width: 170px;
+  height: 32px;
+  padding: 4px;
+  vertical-align: middle;
+}
+td {
+  text-align: center;
+  border: orange 5px solid;
+  border-collapse: collapse;
+}
+
+th {
+  font-weight: bold;
+  text-align: right;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+#footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #6e15c9;
+  color: #eee;
+  /*   grid-area: footer; */
+}

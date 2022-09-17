@@ -1,0 +1,241 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --poppins: "Poppins", sans-serif;
+  --open-sans: "Open Sans", sans-serif;
+}
+
+body {
+  font-family: var(--open-sans);
+  min-height: 375px;
+}
+
+/* header */
+.header {
+  color: #eee;
+  background-color: #6e15c9;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem;
+}
+
+.contacto {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  padding-left: 2rem;
+}
+
+.info-contacto {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5rem 0 1rem;
+}
+
+.correo {
+  padding: 0 0 0 1rem;
+}
+/* barra de navegacion */
+
+#container {
+  font-size: 0.8rem;
+  padding-top: 0.5rem;
+}
+
+#container a {
+  color: #eee;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+/* .block {
+  display: block;
+  font-size: small;
+} */
+/* ...contenedor principal */
+.contenidoPrincipal {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: repeat(3, max-content);
+  grid-template-areas:
+    "aside main"
+    "tabla tabla"
+    "footer footer";
+}
+
+/* .contenidoPrincipal div {
+  width: 1fr;
+  height: 1fr;
+  outline: 2px solid;
+  margin: 40px auto;
+  background-color: black;
+  border: solid #6e15c9;
+} */
+
+/* .area1 {
+  grid-area: primera-parte;
+}
+.area2 {
+  grid-area: aside;
+}
+
+.area3 {
+  grid-area: main;
+}
+
+.area4 {
+  grid-area: tabla;
+}
+ */
+
+/* aside */
+.aside {
+  grid-area: aside;
+  justify-self: center;
+  padding: 5rem 5rem 2rem 2rem;
+}
+
+.aside span {
+  display: flex;
+  font-size: small;
+  font-family: var(--open-sans);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.aside img {
+  width: 200px;
+  height: 230px;
+  padding-bottom: 2rem;
+}
+
+aside span.titulo {
+  font-size: 20px;
+  opacity: 0.5;
+  padding-bottom: 1rem;
+}
+
+/* main */
+.main {
+  grid-area: main;
+  /*   width: 80%; */
+  background-color: #e7e8ec;
+  padding-bottom: 4rem;
+}
+
+.main p,
+.main li {
+  font-size: 14px;
+}
+
+.main article {
+  width: 87%;
+  padding: 4.5rem 0 0 7rem;
+}
+
+article .seccionPerfil p {
+  padding: 0.5rem 0 3rem 0;
+}
+
+article .seccionEducacion {
+  float: right;
+}
+
+article .seccionEducacion hr {
+  width: 258px;
+}
+
+article .seccionEducacion span {
+  display: flex;
+  padding-top: 0.5rem;
+}
+
+article .seccionEducacion article {
+  padding: 0;
+  margin: 0;
+}
+
+article .seccionExperiencia {
+  width: 258px;
+}
+
+article .seccionExperiencia .listaExperiencia {
+  padding: 0.5rem 0 2rem 1rem;
+}
+
+article .seccionExperiencia .listaExperiencia li {
+  padding-left: 0;
+  line-height: 1.5;
+}
+
+ul.listaAptitudes {
+  padding: 10px 0px 0px 0px;
+  list-style-type: none;
+}
+
+/*               <td>Musicales</td>
+              <td>Deportivos</td>
+              <td>Literarios</td> */
+.hobbies {
+  grid-area: tabla;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tabla {
+  width: 100%;
+  height: 50%;
+  display: table;
+  /* align-items: center;
+  justify-content: center; */
+  padding: 3rem 3rem 3rem 7rem;
+  background-image: url(../img/hobby.jpg);
+  background-size: contain;
+}
+
+tr {
+  display: table-row;
+}
+td,
+th {
+  display: table-cell;
+  width: 170px;
+  height: 32px;
+  padding: 4px;
+  vertical-align: middle;
+}
+td {
+  text-align: center;
+  border: orange 5px solid;
+  border-collapse: collapse;
+}
+
+th {
+  font-weight: bold;
+  text-align: right;
+}
+
+/* .................. */
+
+.footer {
+  grid-area: footer;
+}
+
+#footer {
+  display: flex;
+  /*   position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; */
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #6e15c9;
+  color: #eee;
+  /*   grid-area: footer; */
+}
